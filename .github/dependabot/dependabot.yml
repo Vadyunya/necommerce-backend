@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Обновление зависимостей для Kotlin (Gradle)
+  - package-ecosystem: "gradle"
+    directory: "/" # расположение файла build.gradle или build.gradle.kts
+    schedule:
+      interval: "weekly" # проверка обновлений раз в неделю
+    open-pull-requests-limit: 10 # ограничение на количество открытых PR от Dependabot одновременно
+
+  # Обновление зависимостей для Kotlin (Maven)
+  - package-ecosystem: "maven"
+    directory: "/" # расположение файла pom.xml
+    schedule:
+      interval: "weekly" # проверка обновлений раз в неделю
+    open-pull-requests-limit: 10 # ограничение на количество открытых PR от Dependabot одновременно
+
+  # Обновление зависимостей в Dockerfile
+  - package-ecosystem: "docker"
+    directory: "/" # расположение Dockerfile
+    schedule:
+      interval: "weekly" # проверка обновлений раз в неделю
+    open-pull-requests-limit: 10 # ограничение на количество открытых PR от Dependabot одновременно
